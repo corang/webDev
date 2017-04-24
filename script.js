@@ -40,15 +40,15 @@
 					} else {
 						window.alert("O Won!");
 					}
-
-					for (var chkCol = 0; chkCol < 3; chkCol++) {
-						for (var chkRow = 0; chkRow < 3; chkRow++) {
-							$scope.board[chkRow][chkCol] = 0;
-							console.log($scope.board[chkRow][chkCol]);
-						}
-					}
-					$("td.content").html("");
+					clearBoard();
 				}
+
+				if (counter === 11) {
+					window.alert("Tie Game!");
+					clearBoard();
+				}
+
+				console.log(counter);
 			}
 		};
 
@@ -104,5 +104,17 @@
 			}
 			return diagWin;
 
+		}
+
+		function clearBoard() {
+			for (var chkCol = 0; chkCol < 3; chkCol++) {
+				for (var chkRow = 0; chkRow < 3; chkRow++) {
+					$scope.board[chkRow][chkCol] = 0;
+					console.log($scope.board[chkRow][chkCol]);
+
+					counter = 2;
+				}
+			}
+			$("td.content").html("");
 		}
 	});
