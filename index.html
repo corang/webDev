@@ -17,7 +17,7 @@
 
 	<body ng-app="myApp">
 		<div ng-controller="myCtrl">
-			<table class="table table-bordered">
+			<table class="table table-bordered" style="max-width: 500px; text-align: center;">
 				<tr ng-repeat="row in board track by $index" ng-click="rowClick($index); xOrO($event)"[]>
 					<td ng-repeat="column in row track by $index" class="content" ng-click="colClick($index)"></td>
 				</tr>
