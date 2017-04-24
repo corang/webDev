@@ -106,7 +106,7 @@
 
 		}
 
-		function clearBoard() {
+		$scope.newGame = function clearBoard() {
 			for (var chkCol = 0; chkCol < 3; chkCol++) {
 				for (var chkRow = 0; chkRow < 3; chkRow++) {
 					$scope.board[chkRow][chkCol] = 0;
@@ -116,5 +116,5 @@
 				}
 			}
 			$("td.content").html("");
-		}
+		};
 	});
