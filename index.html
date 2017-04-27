@@ -18,11 +18,11 @@
 	<body ng-app="myApp">
 		<div ng-controller="myCtrl">
 			<table class="table-bordered">
-				<tr ng-repeat="row in board track by $index" ng-click="rowClick($index); xOrO($event)"[]>
+				<tr ng-repeat="row in board track by $index" ng-click="rowClick($index); xOrO($event)">
 					<td ng-repeat="column in row track by $index" class="content" ng-click="colClick($index)"></td>
 				</tr>
 			</table>
+			<button ng-click="newGame()">New Game</button>
 		</div>
-		<button ng-click="newGame()">New Game</button>
 	</body>
 </html>

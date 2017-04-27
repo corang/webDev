@@ -51,6 +51,19 @@
 				console.log(counter);
 			}
 		};
+		
+
+		$scope.newGame = function() {
+			for (var chkCol = 0; chkCol < 3; chkCol++) {
+				for (var chkRow = 0; chkRow < 3; chkRow++) {
+					$scope.board[chkRow][chkCol] = 0;
+					console.log($scope.board[chkRow][chkCol]);
+
+					counter = 2;
+				}
+			}
+			$("td.content").html("");
+		};
 
 		function victoryCheck() {
 			var win = false;
@@ -105,8 +118,8 @@
 			return diagWin;
 
 		}
-
-		$scope.newGame = function clearBoard() {
+		
+		function clearBoard() {
 			for (var chkCol = 0; chkCol < 3; chkCol++) {
 				for (var chkRow = 0; chkRow < 3; chkRow++) {
 					$scope.board[chkRow][chkCol] = 0;
@@ -116,5 +129,5 @@
 				}
 			}
 			$("td.content").html("");
-		};
+		}
 	});
